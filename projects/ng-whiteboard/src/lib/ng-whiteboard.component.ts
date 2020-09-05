@@ -25,7 +25,7 @@ export class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
   @Output() clear = new EventEmitter();
   @Output() undo = new EventEmitter();
   @Output() redo = new EventEmitter();
-  @Output() save = new EventEmitter<string | Blob>();
+  @Output() save: EventEmitter<any> = new EventEmitter<string | Blob | File>();
   @Output() imageAdded = new EventEmitter();
 
   private selection: Selection<any, unknown, null, undefined> = undefined;
@@ -126,7 +126,7 @@ export class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
       );
     }
 
-    this.save.emit();
+    // this.save.emit();
   }
 
   private undoDraw() {
@@ -176,14 +176,14 @@ export class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
     const tempImg = new Image();
     tempImg.onload = () => {
       const aspectRatio = tempImg.width / tempImg.height;
-      const height =
-        tempImg.height > Number(this.selection.style('height').replace('px', ''))
-          ? Number(this.selection.style('height').replace('px', '')) - 40
-          : tempImg.height;
-      const width =
-        height === Number(this.selection.style('height').replace('px', '')) - 40
-          ? (Number(this.selection.style('height').replace('px', '')) - 40) * aspectRatio
-          : tempImg.width;
+      const height = Number(this.selection.style('height').replace('px', ''));
+      // tempImg.height > Number(this.selection.style('height').replace('px', ''))
+      //   ? Number(this.selection.style('height').replace('px', '')) - 40
+      //   : tempImg.height;
+      const width = Number(this.selection.style('width').replace('px', ''));
+      // height === Number(this.selection.style('height').replace('px', '')) - 40
+      //   ? (Number(this.selection.style('height').replace('px', '')) - 40) * aspectRatio
+      //   : tempImg.width;
       group
         .append('image')
         .attr('x', 0)
@@ -287,12 +287,36 @@ export class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
     return svgString;
   }
 
-  private download(url: string, name: string): void {
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('visibility', 'hidden');
-    link.download = name || 'new white-board';
-    document.body.appendChild(link);
-    link.click();
+  private download(url: string, name: string): File {
+    var file = this.dataURLtoFile(url, name);
+
+    this.save.emit(file);
+
+    return file;
+    // const link = document.createElement('a');
+    // link.href = url;
+    // link.setAttribute('visibility', 'hidden');
+    // link.download = name || 'new white-board';
+    // document.body.appendChild(link);
+    // link.click();
+  }
+
+  /**
+   * transformar base64
+   * @param dataurl string base64
+   * @param filename nombre para el File
+   */
+  dataURLtoFile(dataurl, filename) {
+    var arr = dataurl.split(','),
+      mime = arr[0].match(/:(.*?);/)[1],
+      bstr = atob(arr[1]),
+      n = bstr.length,
+      u8arr = new Uint8Array(n);
+
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new File([u8arr], filename, { type: mime });
   }
 }

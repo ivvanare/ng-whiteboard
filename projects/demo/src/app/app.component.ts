@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgWhiteboardService } from 'projects/ng-whiteboard/src/public-api';
 import { ToastrService } from 'ngx-toastr';
 
@@ -12,6 +12,7 @@ export class AppComponent {
   backgroundColor = '#eee';
   size = '5px';
   isActive = false;
+  fileToSave: File;
 
   constructor(private toastr: ToastrService, private whiteboardService: NgWhiteboardService) {}
 
@@ -27,8 +28,9 @@ export class AppComponent {
   onRedo() {
     this.toastr.success('Redo!');
   }
-  onSave() {
+  onSave(file) {
     this.toastr.success('Save!');
+    this.fileToSave = file;
   }
   onImageAded() {
     this.toastr.success('ImageAded!');
