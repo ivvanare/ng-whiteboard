@@ -1,29 +1,29 @@
 {
-  "name": "ng-whiteboard",
+  "name": "ng-whiteboard-btc",
   "version": "0.0.0-semantically-released",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "copy:readme": "copyfiles ./README.md ./projects/ng-whiteboard",
+    "copy:readme": "copyfiles ./README.md ./projects/ng-whiteboard-btc",
     "build": "npm run build:lib && npm run build:demo",
-    "build:lib": "npm run copy:readme && ng build ng-whiteboard",
-    "build:demo": "ng build --prod demo --base-href='https://mostafazke.github.io/ng-whiteboard/'",
+    "build:lib": "npm run copy:readme && ng build ng-whiteboard-btc",
+    "build:demo": "ng build --prod demo --base-href='https://ivvanare.github.io/ng-whiteboard/'",
     "format:check": "prettier --list-different \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
     "format-package-json": "npm-run-all format-package-json:*",
-    "format-package-json:lib": "prettier --write \"projects/ng-whiteboard/package.json\"",
+    "format-package-json:lib": "prettier --write \"projects/ng-whiteboard-btc/package.json\"",
     "format-package-json:main": "prettier --write \"package.json\"",
     "test": "ng test",
-    "test:lib": "ng test ng-whiteboard",
-    "test:lib-coverage": "ng test ng-whiteboard --code-coverage --watch=false",
-    "report-coverage:lib": "cat ./coverage/ng-whiteboard/lcov.info | codecov",
+    "test:lib": "ng test ng-whiteboard-btc",
+    "test:lib-coverage": "ng test ng-whiteboard-btc --code-coverage --watch=false",
+    "report-coverage:lib": "cat ./coverage/ng-whiteboard-btc/lcov.info | codecov",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/demo",
     "publish:lib": "npx semantic-release",
     "adjust-version": "npm-run-all adjust-version:*",
-    "adjust-version:lib": "rjp projects/ng-whiteboard/package.json version $VERSION",
+    "adjust-version:lib": "rjp projects/ng-whiteboard-btc/package.json version $VERSION",
     "adjust-version:main": "rjp package.json version $VERSION",
     "lint": "ng lint",
-    "lint:lib": "ng lint ng-whiteboard",
+    "lint:lib": "ng lint ng-whiteboard-btc",
     "e2e": "ng e2e",
     "semantic-release": "semantic-release",
     "postinstall": "ngcc",
@@ -31,7 +31,7 @@
   },
   "private": false,
   "release": {
-    "pkgRoot": "dist/ng-whiteboard"
+    "pkgRoot": "dist/ng-whiteboard-btc"
   },
   "commitlint": {
     "extends": [
@@ -114,7 +114,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mostafazke/ng-whiteboard.git"
+    "url": "https://github.com/mostafazke/ng-whiteboard-btc.git"
   },
   "resolutions": {
     "**/**/lodash": "^4.17.12"

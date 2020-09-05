@@ -14,8 +14,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "ng-whiteboard": ["dist/ng-whiteboard"],
-      "ng-whiteboard/*": ["dist/ng-whiteboard/*"]
+      "ng-whiteboard-btc": ["dist/ng-whiteboard-btc"],
+      "ng-whiteboard-btc/*": ["dist/ng-whiteboard-btc/*"]
     }
   },
   "angularCompilerOptions": {

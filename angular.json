@@ -3,31 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-whiteboard": {
+    "ng-whiteboard-btc": {
       "projectType": "library",
-      "root": "projects/ng-whiteboard",
-      "sourceRoot": "projects/ng-whiteboard/src",
+      "root": "projects/ng-whiteboard-btc",
+      "sourceRoot": "projects/ng-whiteboard-btc/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-whiteboard/tsconfig.lib.json",
-            "project": "projects/ng-whiteboard/ng-package.json"
+            "tsConfig": "projects/ng-whiteboard-btc/tsconfig.lib.json",
+            "project": "projects/ng-whiteboard-btc/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-whiteboard/src/test.ts",
-            "tsConfig": "projects/ng-whiteboard/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-whiteboard/karma.conf.js"
+            "main": "projects/ng-whiteboard-btc/src/test.ts",
+            "tsConfig": "projects/ng-whiteboard-btc/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-whiteboard-btc/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["projects/ng-whiteboard/tsconfig.lib.json", "projects/ng-whiteboard/tsconfig.spec.json"],
+            "tsConfig": ["projects/ng-whiteboard-btc/tsconfig.lib.json", "projects/ng-whiteboard-btc/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -146,5 +146,5 @@
       }
     }
   },
-  "defaultProject": "ng-whiteboard"
+  "defaultProject": "ng-whiteboard-btc"
 }

@@ -6,7 +6,7 @@ import { ContainerElement, curveBasis, select, drag, Selection, line, event, mou
 
 @Component({
   // tslint:disable-next-line: component-selector
-  selector: 'ng-whiteboard',
+  selector: 'ng-whiteboard-btc',
   template: `
     <svg #svgContainer [style.background-color]="this.backgroundColor || this.whiteboardOptions.backgroundColor"></svg>
   `,

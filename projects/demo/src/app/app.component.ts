@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NgWhiteboardService } from 'projects/ng-whiteboard/src/public-api';
+import { NgWhiteboardService } from 'projects/ng-whiteboard-btc/src/public-api';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
