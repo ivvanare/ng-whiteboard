@@ -26,7 +26,6 @@
     "lint:lib": "ng lint ng-whiteboard-btc",
     "e2e": "ng e2e",
     "semantic-release": "semantic-release",
-    "postinstall": "ngcc",
     "commit": "git-cz"
   },
   "private": false,
