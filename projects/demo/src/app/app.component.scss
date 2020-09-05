@@ -2,9 +2,13 @@ $button-bg-color: #348AA7;
 $button-border-color: #166E84;
 $timing:.3s;
 
+.row{
+  width: 400px;
+  height: 600px;
+}
 .white-board {
-  width: 100%;
-  height: 100vh;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   background: #fff;
   overflow: hidden;
 }

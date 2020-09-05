@@ -49,19 +49,22 @@
     }
   }
 </style>
-<div class="white-board">
-  <ng-whiteboard
-    [color]="color"
-    [backgroundColor]="backgroundColor"
-    [size]="size"
-    (init)="onInit()"
-    (clear)="onClear()"
-    (imageAdded)="onImageAded()"
-    (redo)="onRedo()"
-    (undo)="onUndo()"
-    (save)="onSave()"
-  ></ng-whiteboard>
+<div class="row">
+  <div class="white-board">
+    <ng-whiteboard
+      [color]="color"
+      [backgroundColor]="backgroundColor"
+      [size]="size"
+      (init)="onInit()"
+      (clear)="onClear()"
+      (imageAdded)="onImageAded()"
+      (redo)="onRedo()"
+      (undo)="onUndo()"
+      (save)="onSave($event)"
+    ></ng-whiteboard>
+  </div>  
 </div>
+
 <div class="tools">
   <button (click)="save()">Save</button>
 
