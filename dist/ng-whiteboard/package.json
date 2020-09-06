@@ -1,0 +1,45 @@
+{
+  "name": "ng-whiteboard",
+  "version": "0.0.0-semantically-released",
+  "author": {
+    "name": "Mostafa Zaki",
+    "email": "mostafazke@gmail.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mostafazke/ng-whiteboard.git"
+  },
+  "description": "Angular whiteboard component",
+  "keywords": [
+    "angular",
+    "whiteboard",
+    "component",
+    "library"
+  ],
+  "homepage": "https://mostafazke.github.io/ng-whiteboard/",
+  "bugs": {
+    "url": "https://github.com/mostafazke/ng-whiteboard/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+  },
+  "dependencies": {
+    "d3": "^5.9.7",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/ng-whiteboard.umd.js",
+  "module": "fesm5/ng-whiteboard.js",
+  "es2015": "fesm2015/ng-whiteboard.js",
+  "esm5": "esm5/ng-whiteboard.js",
+  "esm2015": "esm2015/ng-whiteboard.js",
+  "fesm5": "fesm5/ng-whiteboard.js",
+  "fesm2015": "fesm2015/ng-whiteboard.js",
+  "typings": "ng-whiteboard.d.ts",
+  "metadata": "ng-whiteboard.metadata.json",
+  "sideEffects": false
+}

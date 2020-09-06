@@ -25,8 +25,7 @@
     "lint": "ng lint",
     "lint:lib": "ng lint ng-whiteboard-btc",
     "e2e": "ng e2e",
-    "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "semantic-release": "semantic-release"
   },
   "private": false,
   "release": {
@@ -110,10 +109,6 @@
     "prettier": "^2.0.5",
     "replace-json-property": "^1.4.3",
     "tsickle": "^0.38.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivvanare/ng-whiteboard-btc.git"
   },
   "resolutions": {
     "**/**/lodash": "^4.17.12"

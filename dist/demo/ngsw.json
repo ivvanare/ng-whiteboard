@@ -1,0 +1,82 @@
+{
+  "configVersion": 1,
+  "timestamp": 1599411291482,
+  "index": "https://ivvanare.github.io/ng-whiteboard-btc/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://ivvanare.github.io/ng-whiteboard-btc/favicon.ico",
+        "https://ivvanare.github.io/ng-whiteboard-btc/index.html",
+        "https://ivvanare.github.io/ng-whiteboard-btc/main-es2015.708fb0151ae612eccc37.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/main-es5.708fb0151ae612eccc37.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/manifest.json",
+        "https://ivvanare.github.io/ng-whiteboard-btc/polyfills-es2015.07c1bf762629a952ac35.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/polyfills-es5.64bf5d67bdbcdd839978.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/runtime-es2015.0dae8cbc97194c7caed4.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/runtime-es5.0dae8cbc97194c7caed4.js",
+        "https://ivvanare.github.io/ng-whiteboard-btc/styles.0a09690a8fe019988f32.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-128x128.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-144x144.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-152x152.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-192x192.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-384x384.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-512x512.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-72x72.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-96x96.png",
+        "https://ivvanare.github.io/ng-whiteboard-btc/cursor.50e267256fa02647da68.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-128x128.png": "6acc83b99a4fec9522a82c02aa4640f7908d71c3",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-144x144.png": "dd8c2562d49579fc14284145a26b004ff4a1655c",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-152x152.png": "32c40b4d168e5e71c11765ccdfa731f09a04c945",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-192x192.png": "206bec68af0cc4d12bf03daa33121b4744c347ac",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-384x384.png": "9dc5ab791aaea34ec88d60c91b00a4b35f663be4",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-512x512.png": "73f1e06880cda5d95a6a89ea3c145d5835b44c91",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-72x72.png": "e10b2929bf22228e0aba538082089b61d9e45902",
+    "https://ivvanare.github.io/ng-whiteboard-btc/assets/icons/icon-96x96.png": "c28742a0e594cc07d3c294cd838093121daf1d43",
+    "https://ivvanare.github.io/ng-whiteboard-btc/cursor.50e267256fa02647da68.svg": "9670945e93fc66371d63e845e27d4cd8ef2b9368",
+    "https://ivvanare.github.io/ng-whiteboard-btc/favicon.ico": "9d35872b3a7d7f6db2f00438f76872ed484174b8",
+    "https://ivvanare.github.io/ng-whiteboard-btc/index.html": "3bbf143dcb4cb1082bb3cf283b32c00be9d03142",
+    "https://ivvanare.github.io/ng-whiteboard-btc/main-es2015.708fb0151ae612eccc37.js": "e97e33e69e88110752672806713686e6c9c4eb51",
+    "https://ivvanare.github.io/ng-whiteboard-btc/main-es5.708fb0151ae612eccc37.js": "7b74bcda5932efbfc8b9b65a90fa32a8a7ff8c7e",
+    "https://ivvanare.github.io/ng-whiteboard-btc/manifest.json": "6d18914a1d809524a63728163e793802c67a0168",
+    "https://ivvanare.github.io/ng-whiteboard-btc/polyfills-es2015.07c1bf762629a952ac35.js": "c390c01ffbc2fe4ed798c2cdf9c887116ec0f6e1",
+    "https://ivvanare.github.io/ng-whiteboard-btc/polyfills-es5.64bf5d67bdbcdd839978.js": "da13b1a6ab1af1bc1252f3515a3ab83b6e0b1591",
+    "https://ivvanare.github.io/ng-whiteboard-btc/runtime-es2015.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://ivvanare.github.io/ng-whiteboard-btc/runtime-es5.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://ivvanare.github.io/ng-whiteboard-btc/styles.0a09690a8fe019988f32.css": "78fb97f53093aa1fdd94ff4a5d108964878eae18"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
