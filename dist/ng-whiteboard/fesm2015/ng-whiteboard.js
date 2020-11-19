@@ -169,6 +169,42 @@ class NgWhiteboardComponent {
         this.subscriptionList = [];
         this.undoStack = [];
         this.redoStack = [];
+        /**
+         * convertir base64 a blob
+         * @param b64DataUrl
+         * @param contentType
+         * @param sliceSize
+         */
+        this.b64toBlob = (/**
+         * @param {?} b64DataUrl
+         * @param {?=} sliceSize
+         * @return {?}
+         */
+        (b64DataUrl, sliceSize = 512) => {
+            /** @type {?} */
+            var arr = b64DataUrl.split(",");
+            /** @type {?} */
+            var contentType = arr[0].match(/:(.*?);/)[1];
+            /** @type {?} */
+            const byteCharacters = atob(arr[1]);
+            /** @type {?} */
+            const byteArrays = [];
+            for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                /** @type {?} */
+                const slice = byteCharacters.slice(offset, offset + sliceSize);
+                /** @type {?} */
+                const byteNumbers = new Array(slice.length);
+                for (let i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                /** @type {?} */
+                const byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+            }
+            /** @type {?} */
+            const blob = new Blob(byteArrays, { type: contentType });
+            return blob;
+        });
     }
     /**
      * @return {?}
@@ -546,37 +582,9 @@ class NgWhiteboardComponent {
      */
     download(url, name) {
         /** @type {?} */
-        var file = this.dataURLtoFile(url, name);
+        var file = this.b64toBlob(url);
         this.save.emit(file);
         return file;
-        // const link = document.createElement('a');
-        // link.href = url;
-        // link.setAttribute('visibility', 'hidden');
-        // link.download = name || 'new white-board';
-        // document.body.appendChild(link);
-        // link.click();
-    }
-    /**
-     * transformar base64
-     * @param {?} dataurl string base64
-     * @param {?} filename nombre para el File
-     * @return {?}
-     */
-    dataURLtoFile(dataurl, filename) {
-        /** @type {?} */
-        var arr = dataurl.split(',');
-        /** @type {?} */
-        var mime = arr[0].match(/:(.*?);/)[1];
-        /** @type {?} */
-        var bstr = atob(arr[1]);
-        /** @type {?} */
-        var n = bstr.length;
-        /** @type {?} */
-        var u8arr = new Uint8Array(n);
-        while (n--) {
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return new File([u8arr], filename, { type: mime });
     }
 }
 NgWhiteboardComponent.decorators = [
@@ -658,6 +666,14 @@ if (false) {
      * @private
      */
     NgWhiteboardComponent.prototype.redoStack;
+    /**
+     * convertir base64 a blob
+     * \@param b64DataUrl
+     * \@param contentType
+     * \@param sliceSize
+     * @type {?}
+     */
+    NgWhiteboardComponent.prototype.b64toBlob;
     /**
      * @type {?}
      * @private

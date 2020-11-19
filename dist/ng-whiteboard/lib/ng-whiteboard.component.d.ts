@@ -36,9 +36,10 @@ export declare class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
     private saveAsSvg;
     private download;
     /**
-     * transformar base64
-     * @param dataurl string base64
-     * @param filename nombre para el File
+     * convertir base64 a blob
+     * @param b64DataUrl
+     * @param contentType
+     * @param sliceSize
      */
-    dataURLtoFile(dataurl: any, filename: any): File;
+    b64toBlob: (b64DataUrl: any, sliceSize?: number) => Blob;
 }
