@@ -287,36 +287,38 @@ export class NgWhiteboardComponent implements AfterViewInit, OnDestroy {
     return svgString;
   }
 
-  private download(url: string, name: string): File {
-    var file = this.dataURLtoFile(url, name);
-
+  private download(url: string, name: string): any {
+    var file = this.b64toBlob(url);
     this.save.emit(file);
 
     return file;
-    // const link = document.createElement('a');
-    // link.href = url;
-    // link.setAttribute('visibility', 'hidden');
-    // link.download = name || 'new white-board';
-    // document.body.appendChild(link);
-    // link.click();
   }
 
   /**
-   * transformar base64
-   * @param dataurl string base64
-   * @param filename nombre para el File
+   * convertir base64 a blob
+   * @param b64DataUrl 
+   * @param contentType 
+   * @param sliceSize 
    */
-  dataURLtoFile(dataurl, filename) {
-    var arr = dataurl.split(','),
-      mime = arr[0].match(/:(.*?);/)[1],
-      bstr = atob(arr[1]),
-      n = bstr.length,
-      u8arr = new Uint8Array(n);
-
-    while (n--) {
-      u8arr[n] = bstr.charCodeAt(n);
+  b64toBlob = (b64DataUrl, sliceSize=512) => {
+    var arr = b64DataUrl.split(",");
+    var contentType = arr[0].match(/:(.*?);/)[1]
+    const byteCharacters = atob(arr[1]);
+    const byteArrays = [];
+  
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      const slice = byteCharacters.slice(offset, offset + sliceSize);
+  
+      const byteNumbers = new Array(slice.length);
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+  
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
     }
-
-    return new File([u8arr], filename, { type: mime });
+  
+    const blob = new Blob(byteArrays, {type: contentType});
+    return blob;
   }
 }
